@@ -1,0 +1,380 @@
+﻿***********************************************************************************************
+************************************ [Part 1] Consent form ************************************
+***********************************************************************************************
+~n means new line
+
+<page ConsentForm>
+Consent form ~n~n
+We invite you to take part in a study about how people describe other persons.~n
+In this study you will have to [write a short description of what the participants will have to do]~n~n
+
+1. Participation in this study is voluntary and does not imply any risk. You have the right to withdraw
+from the study at any moment, without any consequences. If you wish to withdraw during the experiment, press the CTRL+Q key combination to exit the program.~n
+2. The colected responses are confidential. We will not ask for information that will allow us to identify you.
+The data we collect from participants will be used only for research purposes, and will be analysed as a whole, without focusing on individual answers.~n
+
+The study is conducted by [write your name here].~n
+For any questions regarding the study you can send as an e-mail at [insert your e-mail here]~n~n
+
+By clicking on CONTINUE you declare that you understand the conditions under which you participate
+in this study, and express your consent to participate.
+</page>
+
+
+# this sets up the visual properties of all instruction pages
+# to see information about a function right click on the function and left click Help (or select the function and press F1)
+<instruct>
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ inputdevice = mouse
+/ navigationbuttonfontstyle = ("MS Shell Dlg 2", 4%, false, false, false, false, 5, 1)
+</instruct>
+
+
+
+***********************************************************************************************
+************************************ [Part 2] Demographics ************************************
+***********************************************************************************************
+radiobuttons is a question with multiple options and only one possible answer
+<radiobuttons gender>
+/ options = ("Male","Female","Other","Prefer not to say")
+/ caption = "What is your gender?"
+</radiobuttons>
+
+textbox is and open-ended question
+<textbox age>
+/ caption = "How old are you?"
+/ range = (18,99)
+</textbox>
+
+dropdown is a question with multiple options and only one possible answer, but this time 
+participants select the answer from a list
+<dropdown Education>
+/ caption ="What is the last level of education you completed?"
+/ options = ("Middle School", "High school", "Higher Education", "PhD", "Other")
+</dropdown>
+
+
+
+<listbox MaritalStatus>
+/ options = ("Single","Married","Divorced","Other")
+/ caption = "What is your relationship status?"
+</listbox>
+
+<surveypage Demographics>
+/ questions = [1=Gender; 2=Age; 3=Education; 4=MaritalStatus]
+/ showpagenumbers = false
+/ showquestionnumbers = false
+</surveypage>
+
+
+<survey Demo>
+/ pages = [1=Demographics]
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ navigationbuttonsize = (15,7)
+/ navigationbuttonfontstyle = ("MS Shell Dlg 2", 4%, false, false, false, false, 5, 1)
+</survey>
+
+
+
+***********************************************************************************************
+************************************ [Part 3] Questionnaire ***********************************
+***********************************************************************************************
+The Affective Style Questionnaire: Development and Psychometric Properties 10.1007/s10862-009-9142-4
+Each question must be programmed individually.
+
+
+<radiobuttons ASQ_1>
+  / caption = "People usually can’t tell how I am feeling inside."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_2>
+  / caption = "I have my emotions well under control."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_3>
+  / caption = "I can tolerate having strong emotions."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_4>
+  / caption = "I can avoid getting upset by taking a different perspective on things."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_5>
+  / caption = "I often suppress my emotional reactions to things."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_6>
+  / caption = "It’s ok if people see me being upset."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_7>
+  / caption = "I can calm down very quickly."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_8>
+  / caption = "I am able to let go of my feelings."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_9>
+  / caption = "I am good at hiding my feelings."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_10>
+  / caption = "People usually can’t tell when I am upset."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_11>
+  / caption = "It’s ok to feel negative emotions at times."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_12>
+  / caption = "I can get out of a bad mood very quickly."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_13>
+  / caption = "People usually can’t tell when I am sad."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_14>
+  / caption = "I can tolerate being upset."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_15>
+  / caption = "I can act in a way that people don’t see me being upset."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_16>
+  / caption = "I know exactly what to do to get myself into a better mood."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_17>
+  / caption = "There is nothing wrong with feeling very emotional."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_18>
+  / caption = "I could easily fake emotions."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_19>
+  / caption = "I can get into a better mood quite easily."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+<radiobuttons ASQ_20>
+  / caption = "I can hide my anger well if I have to."
+  / options = ("not true of me at all", "a little bit", "moderately", "quite a bit", "extremely true of me")
+  / orientation = horizontal
+  </radiobuttons>
+
+
+<surveypage ASQ_page1>
+/ questions = [1=ASQ_1; 2=ASQ_2; 3=ASQ_3; 4=ASQ_4; 5=ASQ_5]
+/ itemfontstyle = ("Arial", 2.5%, false, false, false, false, 5, 1)
+/ responsefontstyle = ("Arial", 2%, false, false, false, false, 5, 1)
+/ showpagenumbers = false
+</surveypage>
+
+<surveypage ASQ_page2>
+/ questions = [1=ASQ_6; 2=ASQ_7; 3=ASQ_8; 4=ASQ_9; 5=ASQ_10]
+/ itemfontstyle = ("Arial", 2.5%, false, false, false, false, 5, 1)
+/ responsefontstyle = ("Arial", 2%, false, false, false, false, 5, 1)
+/ showpagenumbers = false
+</surveypage>
+
+<surveypage ASQ_page3>
+/ questions = [1=ASQ_11; 2=ASQ_12; 3=ASQ_13; 4=ASQ_14; 5=ASQ_15]
+/ itemfontstyle = ("Arial", 2.5%, false, false, false, false, 5, 1)
+/ responsefontstyle = ("Arial", 2%, false, false, false, false, 5, 1)
+/ showpagenumbers = false
+</surveypage>
+
+<surveypage ASQ_page4>
+/ questions = [1=ASQ_16; 2=ASQ_17; 3=ASQ_18; 4=ASQ_19; 5=ASQ_20]
+/ itemfontstyle = ("Arial", 2.5%, false, false, false, false, 5, 1)
+/ responsefontstyle = ("Arial", 2%, false, false, false, false, 5, 1)
+/ showpagenumbers = false
+</surveypage>
+
+<survey ASQ>
+/ pages = [1=ASQ_page1;2=ASQ_page2;3=ASQ_page3;4=ASQ_page4]
+</survey>
+
+
+
+
+************************************************************************************************
+************************************ [Part 4] Inquisit task ************************************
+************************************************************************************************
+<page inst_EC>
+In the following section a series of pictures will appear on the screen. One picture will be on the left and another picture will on the right.
+Your task will be to simply watch these pictures as they are presented on the screen. After the presentation you will have to answer some questions related to these pictures.
+</page>
+
+<text fixation>
+/ items = ("+")
+/ fontstyle = ("MS Shell Dlg 2", 20%, false, false, false, false, 5, 1)
+</text>
+
+<shape delete>
+/ shape = rectangle
+/ size = (15%, 15%)
+/ color = white
+</shape>
+
+<picture CS1>
+/ items = ("CS1.jpg")
+/ size = (40%, 40%)
+/ position = (30%, 50%)
+</picture>
+
+<picture CS2>
+/ items = ("CS2.jpg")
+/ size = (40%, 40%)
+/ position = (30%, 50%)
+</picture>
+
+<picture US1>
+/ items = ("US1.1.jpg","US1.2.jpg")
+/ size = (40%, 40%)
+/ position = (70%, 50%)
+</picture>
+
+<picture US2>
+/ items = ("US2.1.jpg","US2.2.jpg")
+/ size = (40%, 40%)
+/ position = (70%, 50%)
+</picture>
+
+<trial t1>
+/ stimulustimes = [1=fixation; 499=delete; 500=picture.CS1,picture.US1]
+/ timeout = 3000
+</trial>
+
+<trial t2>
+/ stimulustimes = [1=fixation; 499=delete; 500=picture.CS2,picture.US2]
+/ timeout = 3000
+</trial>
+
+
+<text CS_rate_Q>
+/ items = ("How much do you like this picture?")
+/ position = (60%, 50%)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text>
+
+<likert CS1_Rate>
+/ stimulusframes = [1=CS_rate_Q, CS1]
+/ anchors = [1= "not at all";10="very much"]
+/ position = (50%,80%)
+/ anchorwidth = 2
+</likert>
+
+<likert CS2_Rate>
+/ stimulusframes = [1=CS_rate_Q, CS2]
+/ anchors = [1= "not at all";10="very much"]
+/ position = (50%,80%)
+/ anchorwidth = 1
+</likert>
+
+<block EC>
+/ preinstructions = (inst_EC)
+/ trials = [1-20=noreplacenorepeat(t1,t2);21=CS1_Rate;22=CS2_Rate]
+</block>
+
+Person 1 + Image 1.1 presented 5 times
+Person 1 + Image 1.2 presented 5 times
+
+Person 2 + Image 2.1 presented 5 times
+Person 2 + Image 2.2 presented 5 times
+
+***********************************************************************************************
+********************************** [Extra 1] Debriefing page **********************************
+***********************************************************************************************
+
+<values>
+/ stopit = 0
+</values>
+
+<block EndBlock>
+/ stop = [
+    values.stopit == 1;
+]
+/ trials = [1=debrief]
+</block>
+
+<surveypage debrief>
+/ ontrialend = [
+    values.stopit = 1;
+]
+
+/ caption = "
+	Well done, the study has ended! ~n~n
+	The purpose of the study was to investigate a learning by association. ~n~n
+	If you have any qustions, please contact us at: fictional@email.com ~n~n
+	Thank you for the participation!
+"
+/ finishlabel = "End study"
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ navigationbuttonsize = (13%, 7%)
+/ navigationbuttonfontstyle = ("Arial", 2.96%, false, false, false, false, 5, 1)
+/ fontstyle = ("Arial", 2.96%, false, false, false, false, 5, 1)
+</surveypage>
+
+
+
+*the expt element brings everything together. In the expt element I indicate all the parts of my experiment and the order in which they should be displayed.
+<expt experiment>
+/ preinstructions = (ConsentForm)
+/ blocks = [1=Demo;2=ASQ;3=EC;4=EndBlock]
+</expt>
+
+
+<summarydata data>
+/ columns = (
+radiobuttons.gender.response, textbox.age.response, dropdown.Education.response,
+radiobuttons.ASQ_1.response, radiobuttons.ASQ_2.response, radiobuttons.ASQ_3.response, radiobuttons.ASQ_4.response,
+radiobuttons.ASQ_5.response, radiobuttons.ASQ_6.response, radiobuttons.ASQ_7.response, radiobuttons.ASQ_8.response,
+radiobuttons.ASQ_9.response, radiobuttons.ASQ_10.response, radiobuttons.ASQ_11.response, radiobuttons.ASQ_12.response,
+radiobuttons.ASQ_13.response, radiobuttons.ASQ_14.response, radiobuttons.ASQ_15.response, radiobuttons.ASQ_16.response,
+radiobuttons.ASQ_17.response, radiobuttons.ASQ_18.response, radiobuttons.ASQ_19.response, radiobuttons.ASQ_20.response,
+likert.CS1_Rate.response, likert.CS2_Rate.response)
+</summarydata>
+

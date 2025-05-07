@@ -1,0 +1,2 @@
+date	time	group	subject	session	build	blocknum	trialnum	blockcode	trialcode	pretrialpause	posttrialpause	trialduration	trialtimeout	response	correct	latency	stimulusnumber1	stimulusitem1	stimulusonset1	stimulusnumber2	stimulusitem2	stimulusonset2	stimulusnumber3	stimulusitem3	stimulusonset3	stimulusnumber4	stimulusitem4	stimulusonset4
+2025-04-22	21:18:49	1	1	1	6.6.3	2		ASQ						Ctrl+'Q'														
