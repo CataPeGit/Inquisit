@@ -1,0 +1,63 @@
+
+# Partea 1 - literalmente un consent form
+<page ConsentForm>
+We invite you to our study .... ~n newline
+see full text in clasroom docs
+</page>
+
+
+# Partea 2 Questionnaire
+
+# there are 5 types of questions:
+# alea 2 questions aleatorii poti pune orice (rural/urban sau ce pl vrei)
+<radiobuttons>
+/ caption = "what is your gender?"
+/options = ("male", "female")
+/ required = true
+</radiobuttons>
+
+<textbox Age>
+/ caption = "What is your age"
+/ range = (18,99)
+</textbox>
+
+<listbox>
+/options = ()
+</listbox>
+
+
+<dropdown>
+/ caption = "what is your gender?"
+/options = ("male", "female")
+/ required = true
+</dropdown>
+
+<likert>
+
+</likert>
+
+<textbox ID>
+/ caption = "Please give your id, based on docs. Example: ..."
+</textbox>
+
+<surveypage Demo>
+
+</surveypage>
+
+# this command sets up the whole script (so adds all parts)
+<expt a>
+/ preinstructions = (ConsentForm)
+
+/ font =...
+
+/ blocks = [
+    1 = Demo,
+    2 = ...
+]
+</expt>
+
+
+# o sa mai faci un experiment 
+<expt b>
+
+</expt>
